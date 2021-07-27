@@ -1,6 +1,8 @@
 import requests
-from ..userprofile import config
+import yaml
 
+with open("..userprofile/config.yml", 'r'):
+    config = yaml.safe_load(f)
 
 class UserService:
 
