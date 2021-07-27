@@ -3,20 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from .userprofile.user_info import user_info_router
 from .userprofile.language_operations import language_operations_router
 
-tags_metadata = [
-    {
-        "name": "Fast API demo",
-        "description": "These are Fast API demo endpoints."
-    },
-    {
-        "name": "Github User Operations",
-        "description": "These operations fetches various information of the user's github profile."
-    },
-    {
-        "name": "Languages used operations",
-        "description": "These are responsible for computing language statistics based on users github profile."
-    }
-]
+
+with open("./app_config.yml", 'r') as f:
+    tags_metadata = yaml.safe_load(f)['tags']
 
 app = FastAPI(
     title="Github Stats",
