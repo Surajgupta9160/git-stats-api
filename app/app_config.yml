@@ -1,0 +1,7 @@
+tags:
+  - name: "Fast API demo"
+    description: "These are Fast API demo endpoints."
+  - name: "Github User Operations"
+    description: "These operations fetches various information of the user's github profile."
+  - name: "Languages used operations"
+    description: "These are responsible for computing language statistics based on users github profile."
